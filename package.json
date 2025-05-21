@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "sync": "git add -A && git commit -m \"chore: auto-sync $(date +'%Y-%m-%d %H:%M:%S')\" && git push"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

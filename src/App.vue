@@ -99,11 +99,11 @@ const selected     = ref(projects.value[0].component)          // default to Pro
 nav{
   box-shadow: 20%;
   text-align:center;
-  background-color:#eeeeee;
+  background-color: black;
   margin:0;
   padding:0;
   border-bottom-style: groove;
-  box-shadow: 0 0 20px 10px rgba(29, 18, 18, 0.5);
+  box-shadow: 0 0 20px 30px rgba(29, 18, 18, 0.5);
 }
 .intro{
   padding-left: 10%;
@@ -112,29 +112,48 @@ nav{
 .nav-item {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
-  color: #6349a6;
+  color: white;
   display: inline-block;
   text-decoration: none; 
-  border-color:black;
-  background-color: #eeeeee;       /* no underline */
   padding: 0.5rem 1rem;
   transition: transform 0.2s;
+  position: relative;
+}
+.nav-item::before {
+  font-family: Arial, Helvetica, sans-serif;
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  border: 2px solid transparent;
+  pointer-events: none;    /* lets clicks pass through */
+  z-index: -1;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  transform: scale(0.9);
+  opacity:0;
+}
+.nav-item:hover::before{
+  font-family: Arial, Helvetica, sans-serif;
+  transform:scale(1.05);
+  opacity:1;
+  border-color:white;
 }
 .nav-item:hover {
+  font-family: Arial, Helvetica, sans-serif;
   transform: scale(1.05);
-  background-color: #bcbcbc;
 }
 /* if you want to highlight the active one: */
 .nav-item:visited{
-  color: #6349a6;
+  color: white;
 }
 .nav-item:focus{
-  color: #6349a6;
-  background-color: #bcbcbc;
+  color: white;
 }
 .nav-item.active {
-  background-color: #bcbcbc;
-  color: #6349a6;
+  color: white;
 }
 .desc{
   padding-top:0;
@@ -151,12 +170,13 @@ html, body {
   height: 100%;
 }
 body {
+  background-image:
   /* 1. Define a multi-stop gradient */
-  background: linear-gradient(
+  linear-gradient(
     135deg, 
-    #F3E8FF 0%, 
-    #D8B4FE 50%, 
-    #E6E6FA 100%
+    #A57B6B 0%, 
+    #947164 50%, 
+    #785C51 100%
   );
   /* 2. Make the gradient much larger than the viewport */
   background-size: 300% 300%;

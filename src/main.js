@@ -1,18 +1,16 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './assets/main.css'
-createApp(App).mount('#app')
-// 1. import the library core and the Vue component
+
+// Font Awesome Setup
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faUser, faFolderOpen, faBriefcase, faEnvelope, faVolumeLow, faVolumeXmark, faVolumeHigh, faBug } from '@fortawesome/free-solid-svg-icons'
 
-// 2. import whichever icons you need
-import { faUser, faFolderOpen, faBriefcase, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+// Add icons to the library
+library.add(faUser, faFolderOpen, faBriefcase, faEnvelope, faVolumeLow, faVolumeXmark, faVolumeHigh, faBug)
 
-// 3. add them to the library
-library.add(faUser, faFolderOpen, faBriefcase, faEnvelope)
-
-// 4. create + mount app, registering the FA component globally
+// Create and mount the app **once**
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.mount('#app')

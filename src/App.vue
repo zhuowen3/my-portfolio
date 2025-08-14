@@ -84,8 +84,6 @@
     <div v-for="n in 20" :key="n" class="firefly"></div>
     </div>
     </div>
-  <div class="wood-bar left-bar" :style="{ backgroundImage: 'url(/images/image3.jpg)' }"></div>
-  <div class="wood-bar right-bar" :style="{ backgroundImage: 'url(/images/image3.jpg)' }"></div>
   <footer class="footer-bar">
   <div class="tree-container" v-html="footerTrees"></div>
 </footer>
@@ -95,7 +93,7 @@
 import { ref, onMounted, watch } from 'vue'
 import ImageGallery from '@/components/ImageGallery.vue'
 import ProjectAlpha from '@/components/projects/ProjectAlpha.vue'
-
+import ProjectBeta from '@/components/projects/ProjectBeta.vue'
 const sections = [
   { id: 'About Me',   icon: ['fas','user'],         label: 'About Me'    },
   { id: 'Projects',   icon: ['fas','folder-open'],  label: 'Projects'    },
@@ -110,6 +108,7 @@ const galleryImages = ref([
 ])
 const projects = ref([
   { name: 'Aerospace DOP Visualization', component: ProjectAlpha },
+  { name: 'Plushie House E-commerce Website', component: ProjectBeta },
 ])
 const selected = ref(projects.value[0].component)
 
@@ -323,7 +322,7 @@ body {
 }
 
 .gallery img {
-  max-width: 100%;     /* ✅ never overflow the container */
+  max-width: 100%;    
   height: auto;
   display: block;
   border-radius: 10px;
@@ -352,22 +351,24 @@ footer{
 }
 .footer-bar {
   position: fixed;
+  left: 0;         
   bottom: 0;
-  width: 100%;
+  width: 100vw;       
   background: #222;
   padding: 20px;
   text-align: center;
   z-index: 10;
 }
 
+
 .tree-container {
   display: flex;
-  justify-content: center;  /* ✅ Center all trees evenly */
-  flex-wrap: wrap;          /* ✅ Allow wrapping if needed */
-  gap: 10px;                /* ✅ Use gap instead of margins */
+  justify-content: center; 
+  flex-wrap: wrap;          
+  gap: 10px;                
 }
 #app {
-  padding-top: 80px; /* 💡 add this line to push content below nav */
+  padding-top: 80px;
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 100px;
@@ -393,11 +394,10 @@ footer{
   box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
 }
 .highlight-name {
-  color: #16a34a;                   /* Green text */
+  color: #16a34a;               
   font-size: 2rem;
   font-weight: bold;
-  -webkit-text-stroke: 1px black;  /* Border around letters */
-  text-stroke: 1px black;          /* Fallback for future support */
+  -webkit-text-stroke: 1px black;       
 }
 .tree-container svg {
   animation: sway 3s ease-in-out infinite;
@@ -417,7 +417,7 @@ footer{
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;  /* so they don't block clicks */
+  pointer-events: none; 
   overflow: hidden;
   z-index: 2;
 }

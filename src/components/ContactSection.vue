@@ -86,7 +86,9 @@
 </template>
 
 <script setup lang="ts">
-// purely presentational
+defineOptions({
+  name: 'ContactSection'
+})
 </script>
 
 <style scoped>

@@ -39,7 +39,7 @@
         </div>
         <div>
           <h3 class="font-semibold text-lg">LinkedIn</h3>
-          <a href="https://www.linkedin.com/in/zhuowen-li-404420358/" target="_blank" class="text-gray-700 hover:text-cyan-500">
+          <a href="https://www.linkedin.com/in/zhuowen-li-404420358" target="_blank" class="text-gray-700 hover:text-cyan-500">
             linkedin.com/in/zhuowen-li
           </a>
         </div>
@@ -66,19 +66,6 @@
         <div>
           <h3 class="font-semibold text-lg">Location</h3>
           <p class="text-gray-700">Los Angeles, CA</p>
-        </div>
-      </div>
-
-      <!-- Resume -->
-      <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
-        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-purple-100 text-purple-600">
-          <i class="fas fa-file-alt"></i>
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg">Resume</h3>
-          <a href="/resume.pdf" target="_blank" class="text-gray-700 hover:text-purple-500">
-            Download PDF
-          </a>
         </div>
       </div>
     </div>

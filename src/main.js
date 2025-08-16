@@ -6,10 +6,10 @@ import './assets/main.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { faMapMarkerAlt, faPhoneAlt, faUser, faFolderOpen, faBriefcase, faEnvelope, faVolumeLow, faVolumeXmark, faVolumeHigh, faBug } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faLocationDot, faUser, faFolderOpen, faBriefcase, faEnvelope, faVolumeLow, faVolumeXmark, faVolumeHigh, faBug } from '@fortawesome/free-solid-svg-icons'
 
 // Add icons to the library
-library.add(faUser, faFolderOpen, faBriefcase, faEnvelope, faVolumeLow, faVolumeXmark, faVolumeHigh, faBug, faPhoneAlt, faMapMarkerAlt, faGithub, faLinkedinIn)
+library.add(faUser, faFolderOpen, faBriefcase, faEnvelope, faVolumeLow, faVolumeXmark, faVolumeHigh, faBug, faPhone, faLocationDot, faGithub, faLinkedinIn)
 
 // Create and mount the app **once**
 const app = createApp(App)

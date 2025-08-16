@@ -10,8 +10,8 @@
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Phone -->
       <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
-        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-green-100 text-green-600">
-          <i class="fas fa-phone-alt"></i>
+        <div class="flex items-center justify-center w-14 h-14 rounded-full text-2xl bg-green-100 text-green-600">
+          <font-awesome-icon :icon="faPhone" />
         </div>
         <div>
           <h3 class="font-semibold text-lg">Phone</h3>
@@ -21,8 +21,8 @@
 
       <!-- Email -->
       <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
-        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-blue-100 text-blue-600">
-          <i class="fas fa-envelope"></i>
+        <div class="flex items-center justify-center w-14 h-14 rounded-full text-2xl bg-blue-100 text-blue-600">
+          <font-awesome-icon :icon="faEnvelope" />
         </div>
         <div>
           <h3 class="font-semibold text-lg">Email</h3>
@@ -34,12 +34,16 @@
 
       <!-- LinkedIn -->
       <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
-        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-cyan-100 text-cyan-600">
-          <i class="fab fa-linkedin-in"></i>
+        <div class="flex items-center justify-center w-14 h-14 rounded-full text-2xl bg-cyan-100 text-cyan-600">
+          <font-awesome-icon :icon="faLinkedinIn" />
         </div>
         <div>
           <h3 class="font-semibold text-lg">LinkedIn</h3>
-          <a href="https://www.linkedin.com/in/zhuowen-li-404420358" target="_blank" class="text-gray-700 hover:text-cyan-500">
+          <a
+            href="https://www.linkedin.com/in/zhuowen-li-404420358"
+            target="_blank" rel="noopener"
+            class="text-gray-700 hover:text-cyan-500"
+          >
             linkedin.com/in/zhuowen-li
           </a>
         </div>
@@ -47,12 +51,12 @@
 
       <!-- GitHub -->
       <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
-        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-gray-100 text-gray-800">
-          <i class="fab fa-github"></i>
+        <div class="flex items-center justify-center w-14 h-14 rounded-full text-2xl bg-gray-100 text-gray-800">
+          <font-awesome-icon :icon="faGithub" />
         </div>
         <div>
           <h3 class="font-semibold text-lg">GitHub</h3>
-          <a href="https://github.com/zhuowen3" target="_blank" class="text-gray-700 hover:text-gray-900">
+          <a href="https://github.com/zhuowen3" target="_blank" rel="noopener" class="text-gray-700 hover:text-gray-900">
             github.com/zhuowen3
           </a>
         </div>
@@ -60,8 +64,8 @@
 
       <!-- Location -->
       <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
-        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-yellow-100 text-yellow-600">
-          <i class="fas fa-map-marker-alt"></i>
+        <div class="flex items-center justify-center w-14 h-14 rounded-full text-2xl bg-yellow-100 text-yellow-600">
+          <font-awesome-icon :icon="faLocationDot" />
         </div>
         <div>
           <h3 class="font-semibold text-lg">Location</h3>
@@ -73,9 +77,15 @@
 </template>
 
 <script>
+import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+
 export default {
-  name: 'ContactSection', // multi-word, satisfies ESLint
-};
+  name: 'ContactSection',
+  data() {
+    return { faPhone, faEnvelope, faLocationDot, faGithub, faLinkedinIn }
+  }
+}
 </script>
 
 <style scoped>

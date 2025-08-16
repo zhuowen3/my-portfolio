@@ -39,7 +39,7 @@
         </div>
         <div>
           <h3 class="font-semibold text-lg">LinkedIn</h3>
-          <a href="https://www.linkedin.com/in/zhuowen-li" target="_blank" class="text-gray-700 hover:text-cyan-500">
+          <a href="https://www.linkedin.com/in/zhuowen-li-404420358/" target="_blank" class="text-gray-700 hover:text-cyan-500">
             linkedin.com/in/zhuowen-li
           </a>
         </div>

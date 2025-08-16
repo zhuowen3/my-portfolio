@@ -86,9 +86,14 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: 'ContactSection'
-})
+// purely presentational
+</script>
+
+<!-- Classic script just to set a multi-word name (fixes ESLint rule) -->
+<script lang="ts">
+export default {
+  name: 'ContactSection',
+};
 </script>
 
 <style scoped>

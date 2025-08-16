@@ -1,6 +1,5 @@
 <template>
-  <section class="contact-page py-12 px-6 max-w-4xl mx-auto">
-    <!-- Title -->
+  <section class="py-12 px-6 max-w-4xl mx-auto">
     <header class="text-center mb-10">
       <h2 class="text-4xl font-bold text-gray-800">Contact Me</h2>
       <p class="text-gray-600 mt-2">
@@ -8,11 +7,10 @@
       </p>
     </header>
 
-    <!-- Contact Info -->
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Phone -->
-      <div class="contact-card">
-        <div class="icon-wrapper bg-green-100 text-green-600">
+      <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-green-100 text-green-600">
           <i class="fas fa-phone-alt"></i>
         </div>
         <div>
@@ -22,8 +20,8 @@
       </div>
 
       <!-- Email -->
-      <div class="contact-card">
-        <div class="icon-wrapper bg-blue-100 text-blue-600">
+      <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-blue-100 text-blue-600">
           <i class="fas fa-envelope"></i>
         </div>
         <div>
@@ -35,8 +33,8 @@
       </div>
 
       <!-- LinkedIn -->
-      <div class="contact-card">
-        <div class="icon-wrapper bg-cyan-100 text-cyan-600">
+      <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-cyan-100 text-cyan-600">
           <i class="fab fa-linkedin-in"></i>
         </div>
         <div>
@@ -48,8 +46,8 @@
       </div>
 
       <!-- GitHub -->
-      <div class="contact-card">
-        <div class="icon-wrapper bg-gray-100 text-gray-800">
+      <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-gray-100 text-gray-800">
           <i class="fab fa-github"></i>
         </div>
         <div>
@@ -61,8 +59,8 @@
       </div>
 
       <!-- Location -->
-      <div class="contact-card">
-        <div class="icon-wrapper bg-yellow-100 text-yellow-600">
+      <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-yellow-100 text-yellow-600">
           <i class="fas fa-map-marker-alt"></i>
         </div>
         <div>
@@ -72,8 +70,8 @@
       </div>
 
       <!-- Resume -->
-      <div class="contact-card">
-        <div class="icon-wrapper bg-purple-100 text-purple-600">
+      <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
+        <div class="flex items-center justify-center w-14 h-14 rounded-full text-xl bg-purple-100 text-purple-600">
           <i class="fas fa-file-alt"></i>
         </div>
         <div>
@@ -88,15 +86,9 @@
 </template>
 
 <script setup lang="ts">
-
+// purely presentational
 </script>
 
 <style scoped>
-.contact-card {
-  @apply flex items-center gap-4 p-5 bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300;
-}
-
-.icon-wrapper {
-  @apply flex items-center justify-center w-14 h-14 rounded-full text-xl;
-}
+/* no @apply needed */
 </style>

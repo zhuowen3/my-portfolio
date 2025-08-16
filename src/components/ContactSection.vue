@@ -85,14 +85,9 @@
   </section>
 </template>
 
-<script setup lang="ts">
-// purely presentational
-</script>
-
-<!-- Classic script just to set a multi-word name (fixes ESLint rule) -->
-<script lang="ts">
+<script>
 export default {
-  name: 'ContactSection',
+  name: 'ContactSection', // multi-word, satisfies ESLint
 };
 </script>
 

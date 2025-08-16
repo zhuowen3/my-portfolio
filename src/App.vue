@@ -75,10 +75,8 @@
       </section>
 
       <!-- Contact -->
-      <section v-if="active === 'Contact'">
-        <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
-        <p>…</p>
-      </section>
+      <!-- Contact -->
+    <Contact v-if="active === 'Contact'" />
     </main>
     <div class="firefly-container" v-if="firefliesEnabled">
     <div v-for="n in 20" :key="n" class="firefly"></div>
@@ -94,6 +92,7 @@ import { ref, onMounted, watch } from 'vue'
 import ImageGallery from '@/components/ImageGallery.vue'
 import ProjectAlpha from '@/components/projects/ProjectAlpha.vue'
 import ProjectBeta from '@/components/projects/ProjectBeta.vue'
+import Contact from '@/components/Contact.vue'
 const sections = [
   { id: 'About Me',   icon: ['fas','user'],         label: 'About Me'    },
   { id: 'Projects',   icon: ['fas','folder-open'],  label: 'Projects'    },
